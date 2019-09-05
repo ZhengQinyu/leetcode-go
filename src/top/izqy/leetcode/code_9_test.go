@@ -3,7 +3,6 @@ package leetcode
 import "testing"
 
 func TestIsPalindrome(t *testing.T) {
-
 	if isPalindrome(121) {
 		t.Log("ok")
 	}
