@@ -2,16 +2,25 @@ package _20190927
 
 /* 78. 子集 ( 未解决) */
 func subsets(nums []int) [][]int {
-	/* 90357 */
+	// 幂
+	length := exp2(len(nums))
 	var result = make([][]int, 0)
-	result = append(result, make([]int, 0)) // 初始化空集合
-	for _, num := range nums {
-		length := len(result)
-		for idx := 0; idx < length; idx++ {
-			src := result[idx]
-			src = append(src, num)
-			result = append(result, src)
+	for i := 0; i < length; i++ {
+		result = append(result, make([]int, 0))
+		for j, num := range nums {
+			// 使用位运算标记当前值是否包含在里面
+			if 1<<uint32(j)&i != 0 {
+				result[i] = append(result[i], num)
+			}
 		}
 	}
 	return result
+}
+
+func exp2(n int) int {
+	num := 1
+	for i := 0; i < n; i++ {
+		num *= 2
+	}
+	return num
 }
