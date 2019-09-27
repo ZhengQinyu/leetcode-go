@@ -4,6 +4,7 @@ import (
 	"strings"
 )
 
+/* 13. 罗马数字转整数*/
 func romanToInt(s string) int {
 	number := []int{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1}
 	roman := []string{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"}

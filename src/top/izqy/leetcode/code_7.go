@@ -4,6 +4,8 @@ import (
 	"math"
 )
 
+/* 7. 整数反转 */
+
 func reverse(x int) int {
 	// -2187483648 ~ 2187483647
 	isNe, sum := int64(1), int64(0)

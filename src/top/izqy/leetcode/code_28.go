@@ -1,5 +1,6 @@
 package leetcode
 
+/* 28. 实现 strStr() */
 func strStr(haystack string, needle string) int {
 	var l1 = len(haystack)
 	var l2 = len(needle)

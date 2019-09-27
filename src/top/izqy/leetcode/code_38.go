@@ -2,6 +2,7 @@ package leetcode
 
 import "bytes"
 
+/* 38. 报数 */
 func countAndSay(n int) string {
 	var result = "1"
 	var buffer bytes.Buffer

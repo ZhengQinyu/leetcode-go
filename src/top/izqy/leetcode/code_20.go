@@ -1,5 +1,6 @@
 package leetcode
 
+/* 20. 有效的括号 */
 func isValid(s string) bool {
 	length := len(s)
 	if length == 0 {

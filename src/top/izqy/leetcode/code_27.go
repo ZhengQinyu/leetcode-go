@@ -1,5 +1,6 @@
 package leetcode
 
+/* 27. 移除元素*/
 func removeElement(nums []int, val int) int {
 	length := len(nums)
 	tail := length - 1

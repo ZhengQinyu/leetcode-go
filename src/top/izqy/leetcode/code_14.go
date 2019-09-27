@@ -1,5 +1,6 @@
 package leetcode
 
+/* 14. 最长公共前缀 */
 func longestCommonPrefix(strs []string) string {
 	length := len(strs)
 	if length == 0 {

@@ -5,6 +5,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
+/* 21. 合并两个有序链表*/
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	var header = new(ListNode) // 创建头节点，new 返回指针
 	current := header
