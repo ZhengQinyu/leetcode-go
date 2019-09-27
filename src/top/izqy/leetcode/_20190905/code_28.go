@@ -1,4 +1,4 @@
-package leetcode
+package _20190905
 
 /* 28. 实现 strStr() */
 func strStr(haystack string, needle string) int {

@@ -1,4 +1,4 @@
-package leetcode
+package _20190905
 
 /* 9. 回文数 */
 func isPalindrome(x int) bool {

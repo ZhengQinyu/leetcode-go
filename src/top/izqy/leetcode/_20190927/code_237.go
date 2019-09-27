@@ -1,6 +1,8 @@
 package _20190927
 
-import "top/izqy/leetcode"
+import (
+	"top/izqy/leetcode/_20190905"
+)
 
 /* 237. 删除链表中的节点*/
 
@@ -11,7 +13,7 @@ import "top/izqy/leetcode"
 
 /* 什么鬼，就是写一个处理逻辑 */
 
-func deleteNode(node *leetcode.ListNode) {
+func deleteNode(node *_20190905.ListNode) {
 	node.Val = node.Next.Val
 	node.Next = node.Next.Next
 }

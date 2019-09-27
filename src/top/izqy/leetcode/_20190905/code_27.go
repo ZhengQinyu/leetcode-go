@@ -1,4 +1,4 @@
-package leetcode
+package _20190905
 
 /* 27. 移除元素*/
 func removeElement(nums []int, val int) int {

@@ -1,4 +1,4 @@
-package leetcode
+package _20190905
 
 /* 35. 搜索插入位置 */
 func searchInsert(nums []int, target int) int {

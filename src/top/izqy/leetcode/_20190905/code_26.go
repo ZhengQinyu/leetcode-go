@@ -1,4 +1,4 @@
-package leetcode
+package _20190905
 
 /* 26. 删除排序数组中的重复项 */
 func removeDuplicates(nums []int) int {
