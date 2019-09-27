@@ -1,4 +1,4 @@
-package leetcode
+package _20190927
 
 /* 771. 宝石与石头*/
 func numJewelsInStones(J string, S string) int {

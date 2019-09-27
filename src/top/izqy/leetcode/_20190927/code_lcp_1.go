@@ -1,4 +1,4 @@
-package leetcode
+package _20190927
 
 /* LCP 1  猜数字*/
 func game(guess []int, answer []int) int {
