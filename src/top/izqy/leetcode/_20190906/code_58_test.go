@@ -1,4 +1,4 @@
-package leetcode
+package _20190906
 
 import "testing"
 
@@ -12,9 +12,13 @@ func Test_lengthOfLastWord(t *testing.T) {
 		args: "Hello World",
 		want: 5,
 	}, {
-		name: "test_58",
-		args: " Hello11 ",
+		name: "test_58_2",
+		args: " Helloww ",
 		want: 7,
+	}, {
+		name: "test_58_3",
+		args: "Today is a nice day",
+		want: 3,
 	}}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
