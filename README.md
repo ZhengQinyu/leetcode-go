@@ -1,5 +1,9 @@
 # leetcode-go
 
+### 说明
+
+记录 `leetcode` 刷题记录
+
 ### 分类
 
     20190905/code_1 使用 map,map遍历  
