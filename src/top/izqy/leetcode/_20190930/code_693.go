@@ -10,7 +10,6 @@ func hasAlternatingBits(n int) bool {
 			return false
 		}
 		t = k
-		n /= 2
 	}
 	return true
 }
