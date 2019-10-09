@@ -1,6 +1,6 @@
 package _201909
 
-/* 78. 子集 ( 未解决) */
+/* 78. 子集 */
 func subsets(nums []int) [][]int {
 	// 幂
 	length := exp2(len(nums))

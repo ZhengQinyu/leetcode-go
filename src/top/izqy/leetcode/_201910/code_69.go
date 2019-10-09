@@ -1,6 +1,6 @@
 package _201910
 
-/* 69. x 的平方根 */
+/* 69. x 的平方根 未解决 */
 
 func mySqrt(x int) int {
 	r := x
