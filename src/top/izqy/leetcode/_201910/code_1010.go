@@ -1,8 +1,6 @@
 package _201910
 
-import "fmt"
-
-/* 1010. 总持续时间可被 60 整除的歌曲 未解决 */
+/* 1010. 总持续时间可被 60 整除的歌曲 */
 func numPairsDivisibleBy60(time []int) int {
 	dir := make([]int, 60)
 	for _, t := range time {
@@ -10,14 +8,11 @@ func numPairsDivisibleBy60(time []int) int {
 	}
 	count := 0
 	for idx, t := range dir {
-		fmt.Println(idx)
-		m := t % 60
-		if dir[m] > 0 {
-			if m == 0 || m == 30 {
-				count += (dir[m] * (dir[m] - 1)) / 2
+		if t > 0 {
+			if idx == 0 || idx == 30 {
+				count += (t * (t - 1)) / 2
 			} else {
-				count += dir[m] * dir[60-m]
-				dir[60-m] = 0 // 重置为0避免重复统计
+				count += t * dir[60-idx]
 			}
 		}
 		if idx >= 30 {
