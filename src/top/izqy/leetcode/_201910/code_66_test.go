@@ -6,9 +6,6 @@ import (
 )
 
 func Test_plusOne(t *testing.T) {
-	type args struct {
-		digits []int
-	}
 	tests := []struct {
 		name   string
 		digits []int
