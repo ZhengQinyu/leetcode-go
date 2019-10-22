@@ -4,20 +4,23 @@ import (
 	"testing"
 )
 
-func TestRomanToInt(t *testing.T) {
-	if romanToInt("III") != 3 {
-		t.Fail()
+func Test_romanToInt(t *testing.T) {
+	tests := []struct {
+		name string
+		s    string
+		want int
+	}{
+		{"1", "III", 3},
+		{"2", "IV", 4},
+		{"3", "IX", 9},
+		{"4", "LVIII", 58},
+		{"5", "MCMXCIV", 1994},
 	}
-	if romanToInt("IV") != 4 {
-		t.Fail()
-	}
-	if romanToInt("IX") != 9 {
-		t.Fail()
-	}
-	if romanToInt("LVIII") != 58 {
-		t.Fail()
-	}
-	if romanToInt("MCMXCIV") != 1994 {
-		t.Fail()
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := romanToInt(tt.s); got != tt.want {
+				t.Errorf("romanToInt() = %v, want %v", got, tt.want)
+			}
+		})
 	}
 }

@@ -1,12 +1,27 @@
 package _201909
 
 import (
+	"reflect"
 	"testing"
 )
 
-func TestTwoSum(t *testing.T) {
-	nums := []int{2, 7, 11, 19}
-	if x := twoSum(nums, 9); x[0] != 0 || x[1] != 1 {
-		t.Fail()
+func Test_twoSum(t *testing.T) {
+	type args struct {
+		nums   []int
+		target int
+	}
+	tests := []struct {
+		name string
+		args args
+		want []int
+	}{
+		{"1", args{[]int{2, 7, 11, 19}, 9}, []int{0, 1}},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := twoSum(tt.args.nums, tt.args.target); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("twoSum() = %v, want %v", got, tt.want)
+			}
+		})
 	}
 }
