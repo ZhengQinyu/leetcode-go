@@ -2,22 +2,24 @@ package _201909
 
 import "testing"
 
-func TestRemoveElement(t *testing.T) {
-	nums := []int{3, 2, 2, 3}
-	length := removeElement(nums, 3)
-	if length != 2 {
-		t.Fail()
+func Test_removeElement(t *testing.T) {
+	type args struct {
+		nums []int
+		val  int
 	}
-	for i := 0; i < length; i++ {
-		t.Log(1, nums[i])
+	tests := []struct {
+		name string
+		args args
+		want int
+	}{
+		{"1", args{[]int{3, 2, 2, 3}, 3}, 2},
+		{"2", args{[]int{0, 1, 2, 2, 3, 0, 4, 2}, 2}, 5},
 	}
-
-	nums = []int{0, 1, 2, 2, 3, 0, 4, 2}
-	length = removeElement(nums, 2)
-	if length != 5 {
-		t.Fail()
-	}
-	for i := 0; i < length; i++ {
-		t.Log(2, nums[i])
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := removeElement(tt.args.nums, tt.args.val); got != tt.want {
+				t.Errorf("removeElement() = %v, want %v", got, tt.want)
+			}
+		})
 	}
 }

@@ -2,18 +2,26 @@ package _201909
 
 import "testing"
 
-func TestSearchInsert(t *testing.T) {
-	nums := []int{1, 3, 5, 6}
-	if searchInsert(nums, 5) != 2 {
-		t.Fail()
+func Test_searchInsert(t *testing.T) {
+	type args struct {
+		nums   []int
+		target int
 	}
-	if searchInsert(nums, 2) != 1 {
-		t.Fail()
+	tests := []struct {
+		name string
+		args args
+		want int
+	}{
+		{"1", args{[]int{1, 3, 5, 6}, 5}, 2},
+		{"2", args{[]int{1, 3, 5, 6}, 2}, 1},
+		{"3", args{[]int{1, 3, 5, 6}, 7}, 4},
+		{"4", args{[]int{1, 3, 5, 6}, 0}, 0},
 	}
-	if searchInsert(nums, 7) != 4 {
-		t.Fail()
-	}
-	if searchInsert(nums, 0) != 0 {
-		t.Fail()
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := searchInsert(tt.args.nums, tt.args.target); got != tt.want {
+				t.Errorf("searchInsert() = %v, want %v", got, tt.want)
+			}
+		})
 	}
 }

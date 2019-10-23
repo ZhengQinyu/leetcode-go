@@ -2,17 +2,26 @@ package _201909
 
 import "testing"
 
-func TestStrStr(t *testing.T) {
-	if strStr("hello", "ll") != 2 {
-		t.Fail()
+func Test_strStr(t *testing.T) {
+	type args struct {
+		haystack string
+		needle   string
 	}
-	if strStr("aaaaa", "bba") != -1 {
-		t.Fail()
+	tests := []struct {
+		name string
+		args args
+		want int
+	}{
+		{"1", args{"hello", "ll"}, 2},
+		{"2", args{"aaaaa", "bba"}, -1},
+		{"3", args{"aaaaa", ""}, 0},
+		{"4", args{"abcdabcdefg", "abcde"}, 4},
 	}
-	if strStr("aaaaa", "") != 0 {
-		t.Fail()
-	}
-	if strStr("abcdabcdefg", "abcde") != 4 {
-		t.Fail()
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := strStr(tt.args.haystack, tt.args.needle); got != tt.want {
+				t.Errorf("strStr() = %v, want %v", got, tt.want)
+			}
+		})
 	}
 }
