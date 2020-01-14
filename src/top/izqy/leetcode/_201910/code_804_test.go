@@ -3,9 +3,6 @@ package _201910
 import "testing"
 
 func Test_uniqueMorseRepresentations(t *testing.T) {
-	type args struct {
-		words []string
-	}
 	tests := []struct {
 		name  string
 		words []string
