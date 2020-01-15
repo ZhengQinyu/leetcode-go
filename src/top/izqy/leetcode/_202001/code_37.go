@@ -56,7 +56,9 @@ func try(board [][]byte, m []bool, x, y, z, n int, stack []int, top, a, b int) {
 						break
 					}
 				}
+				z = 0
 			}
 		}
+		y = 0
 	}
 }
