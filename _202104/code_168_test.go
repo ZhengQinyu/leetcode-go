@@ -8,10 +8,10 @@ func Test_convertToTitle(t *testing.T) {
 		args int
 		want string
 	}{
-		//{"1", 1, "A"},
-		//{"2", 26, "Z"},
-		//{"3", 27, "AA"},
-		//{"4", 28, "AB"},
+		{"1", 1, "A"},
+		{"2", 26, "Z"},
+		{"3", 27, "AA"},
+		{"4", 28, "AB"},
 		{"5", 52, "AZ"},
 	}
 	for _, tt := range tests {

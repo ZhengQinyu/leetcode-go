@@ -1,14 +1,22 @@
 package _202104
 
-import "fmt"
+import (
+	"bytes"
+)
 
-// 168. Excel表列名称 FIXME 还未解决
+// 168. Excel表列名称
 func convertToTitle(columnNumber int) string {
-	t := make([]byte, 0)
-	for columnNumber > 26 {
-		fmt.Println((columnNumber - 1) % 26)
-		t = append(t, byte((columnNumber-1)%26+'A'))
-		columnNumber = (columnNumber - 1) / 26
+	var buffer bytes.Buffer
+	for columnNumber > 0 {
+		columnNumber--
+		buffer.WriteByte(byte('A' + (columnNumber % 26)))
+		columnNumber /= 26
 	}
-	return string(t)
+	s := buffer.Bytes()
+	length := len(s)
+	half := length / 2
+	for i := 0; i < half; i++ {
+		s[i], s[length-1-i] = s[length-1-i], s[i]
+	}
+	return buffer.String()
 }
