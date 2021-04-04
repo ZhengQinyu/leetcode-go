@@ -1,12 +1,31 @@
 package _201910
 
-/* 69. x 的平方根 未解决 */
-
+/* 69. x 的平方根 */
 func mySqrt(x int) int {
-	r := x
-	m := r / 2
-	for r/m < m {
-		m = r/m + 1
+	if x < 1 {
+		return 0
 	}
-	return m
+	if x < 4 {
+		return 1
+	}
+	l, r, m := 1, x, x/2
+	for {
+		if x/m < m {
+			r = m
+			m = (l + r) / 2
+			if r == m {
+				return m
+			}
+			continue
+		}
+		if x/m > m {
+			l = m
+			m = (l + r) / 2
+			if l == m {
+				return m
+			}
+			continue
+		}
+		return m
+	}
 }
