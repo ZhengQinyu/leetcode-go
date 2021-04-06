@@ -10,8 +10,8 @@ func Gcd(m, n int) int {
 	return m
 }
 
-// 字符翻转，待测试
-func reverse(buffer *bytes.Buffer) string {
+// 字符翻转
+func Reverse(buffer *bytes.Buffer) string {
 	s := buffer.Bytes()
 	length := len(s)
 	half := length / 2
