@@ -5,6 +5,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// 2. 两数相加
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	var root, current *ListNode
 	carry := 0 // 进位
