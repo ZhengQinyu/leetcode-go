@@ -1,3 +1,3 @@
 #!/bin/bash
-# Read from the file file.txt and output the tenth line to stdout.
+# 195. 第十行
 tail -n +10 file.txt|head -1
